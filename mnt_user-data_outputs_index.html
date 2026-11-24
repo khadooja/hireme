@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0e1116">
+<title>خديجة العمودي – مطورة Flutter</title>
+<meta name="description" content="مطورة Flutter من اليمن. تطبيقاتها منشورة على Google Play وApp Store، وتبحث عن فريق.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="خديجة العمودي – مطورة Flutter">
+<meta property="og:description" content="تطبيقات عربية تشتغل بدون إنترنت، منشورة على المتاجر. شوفوا شغلي.">
+<meta property="og:image" content="https://khadooja-github-io.vercel.app/assets/wazan-home.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0e1116;--ink:#f1ede4;--sub:#8b909c;--line:#232831;--g:#3ddc84}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Cairo,Tahoma,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.85;font-size:18px;overflow-x:hidden}
+.mono{font-family:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;font-size:13px;letter-spacing:.3px}
+a{color:inherit}a:focus-visible,button:focus-visible{outline:3px solid var(--g);outline-offset:3px}
+.w{max-width:1180px;margin:0 auto;padding:0 24px}
+.top{position:fixed;inset:0 0 auto;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:18px 24px;mix-blend-mode:difference;color:#fff;pointer-events:none}
+.top>*{pointer-events:auto}
+.top nav{display:flex;gap:22px;align-items:center;font-size:15px}.top a{text-decoration:none}
+.wm{font-weight:900;font-size:22px}.wm i{display:inline-block;width:9px;height:9px;border-radius:50%;background:#fff;margin-inline-start:4px}
+#lg{font-family:inherit;border:1px solid #fff;background:none;color:#fff;border-radius:99px;padding:0 12px;cursor:pointer}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:110px 0 60px;position:relative}
+.pill{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:99px;padding:3px 16px;margin-bottom:28px;align-self:flex-start;transition:border-color .5s,color .5s;color:#ffb300}
+.pill i{width:9px;height:9px;border-radius:50%;background:currentColor;animation:bk 1.2s infinite}
+.pill.ok{color:var(--g);border-color:var(--g)}.pill.ok i{animation:none}
+@keyframes bk{50%{opacity:.2}}
+.ms{overflow:hidden;padding:.08em 0}.ms>span{display:block;transform:translateY(112%);transition:transform 1s cubic-bezier(.2,.8,.2,1) var(--d,0s)}
+body.ld .ms>span{transform:none}
+h1{font-size:clamp(58px,15vw,200px);font-weight:900;line-height:1.05;letter-spacing:-.02em}
+.sub1{font-size:clamp(22px,3.4vw,38px);font-weight:700;line-height:1.5;max-width:880px;margin-top:22px}
+.sub2{color:var(--sub);font-size:clamp(17px,2vw,22px);margin-top:12px;max-width:720px}
+.cta{display:flex;gap:26px;flex-wrap:wrap;margin-top:34px;font-weight:700}
+.cta a{text-decoration:none;border-bottom:2px solid var(--ink);padding-bottom:2px;transition:color .2s,border-color .2s}.cta a:hover{color:var(--g);border-color:var(--g)}
+.scroll{position:absolute;bottom:26px;inset-inline-start:24px;color:var(--sub)}
+.mq{overflow:hidden;direction:ltr;border-block:1px solid var(--line);padding:14px 0;margin:20px 0 0}
+.mq div{display:flex;width:max-content;font-weight:900;font-size:clamp(42px,8vw,110px);line-height:1.1;white-space:nowrap;will-change:transform}
+.mq div span{padding-inline-end:.5em;-webkit-text-stroke:1.5px var(--ink);color:transparent}
+.mq div span:nth-child(3n){color:var(--ink);-webkit-text-stroke:0}
+.lab{color:var(--g);display:block;margin-bottom:10px}
+.hd{padding:110px 0 30px}
+h2{font-size:clamp(34px,6vw,76px);font-weight:900;line-height:1.2}
+.pj{background:var(--bg);border-top:1px solid var(--line)}
+.pj .in{display:block;padding:70px 0 40px}
+.tx h3{font-size:clamp(44px,7vw,96px);font-weight:900;line-height:1.1;margin:6px 0 12px}
+.tx p{color:#c9c6bd;margin-bottom:14px;max-width:520px}
+.tx .meta{color:var(--sub);display:block;margin-bottom:14px}
+.ln{display:flex;gap:22px;flex-wrap:wrap;font-weight:700}
+.ln a{text-decoration:none;background:linear-gradient(var(--g),var(--g)) 0 100%/0 2px no-repeat;padding-bottom:3px;transition:background-size .3s,color .3s}
+.ln a:hover{background-size:100% 2px;color:var(--g)}
+.pst{position:relative;overflow:hidden;border-radius:16px;direction:ltr;background:#0b141c;margin-top:24px;border:1px solid var(--line)}
+.pst iframe{position:absolute;top:0;left:0;border:0;transform-origin:0 0;pointer-events:none}
+@media (min-width:900px){
+  .stack .pj{position:sticky;top:0}
+  .pj .in{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.4fr);gap:56px;align-items:center;min-height:100vh;padding:80px 0;will-change:transform,opacity}
+  .pst{margin-top:0}.pst.p{max-width:min(32vw,400px);justify-self:center}
+}
+.demo{background:#0c3b2a;color:#e9fff3;padding:90px 0;margin-top:0}
+.demo h2{font-size:clamp(30px,5vw,56px);margin-bottom:6px}
+.demo .meta{color:#8fd9b0;display:block;margin-bottom:6px}
+.rate{display:flex;align-items:center;gap:14px;margin:26px 0 12px;flex-wrap:wrap}
+.rate b{font:700 34px "JetBrains Mono",monospace;min-width:3ch;text-align:center;direction:ltr}
+.rate button,.add{font:700 18px Cairo,sans-serif;border:2px solid var(--g);background:none;color:var(--g);border-radius:10px;cursor:pointer;padding:2px 18px;transition:background .15s,color .15s}
+.rate button:hover,.add:hover{background:var(--g);color:#06210f}
+.add{display:block;margin:6px 0 18px;padding:9px 22px}
+.rows{list-style:none;max-width:520px;min-height:3.4em;border-top:1px solid #1d5a42}
+.rows li{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px solid #1d5a42;animation:ri .35s both}
+@keyframes ri{from{opacity:0;transform:translateX(-10px)}}
+.tot{margin-top:18px;display:grid;gap:4px;max-width:620px}
+.tot b{color:var(--g);font-family:"JetBrains Mono",monospace;direction:ltr;unicode-bidi:isolate}.tot .x b{color:#ffb39a}
+.demo small{display:block;margin-top:12px;color:#8fd9b0}
+.rs{background:none;border:0;color:#8fd9b0;text-decoration:underline;font:inherit;font-size:14px;cursor:pointer;margin-top:10px}
+.oth{padding:110px 0 40px}
+.row{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:22px 0;border-top:1px solid var(--line);text-decoration:none;transition:padding .3s,color .3s}
+a.row:hover{padding-inline-start:20px;color:var(--g)}
+.row b{font-size:clamp(26px,4vw,46px);font-weight:900;line-height:1.2}.row span{color:var(--sub);text-align:end}
+.row:last-child{border-bottom:1px solid var(--line)}
+.how{padding:110px 0}
+.hl{font-size:clamp(26px,4.4vw,54px);font-weight:700;line-height:1.55;max-width:1000px}
+.hl span{color:#3a3f4a;transition:color .35s}.hl span.on{color:var(--ink)}
+.hire{background:#fbf7f0;color:#1b1a17;padding:120px 0 90px}
+.hire .lab{color:#0c3b2a}
+.hire h2{font-size:clamp(38px,8vw,110px);line-height:1.15;max-width:1050px;margin-bottom:34px}
+.btn{display:inline-block;position:relative;overflow:hidden;background:#1b1a17;color:#fbf7f0;font-weight:700;font-size:20px;padding:16px 36px;border-radius:99px;text-decoration:none;isolation:isolate}
+.btn::before{content:"";position:absolute;inset:0;background:var(--g);transform:translateY(101%);transition:transform .35s cubic-bezier(.2,.8,.2,1);z-index:-1}
+.btn:hover{color:#06210f}.btn:hover::before{transform:none}
+.soc{margin-top:28px;display:flex;gap:24px;flex-wrap:wrap}
+footer{background:#fbf7f0;color:#6b665b;text-align:center;padding:0 0 30px;font-size:14px}
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}.rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ms>span{transform:none;transition:none}.rv{opacity:1;transform:none;transition:none}.pill i,.rows li{animation:none}.hl span{color:var(--ink);transition:none}.btn::before{transition:none}}
+</style>
+</head>
+<body>
+<header class="top"><a class="wm" href="#">خديجة<i></i></a>
+<nav><a href="#work" data-i="n1">الشغل</a><a href="#how" data-i="n2">كيف أشتغل</a><a href="#hire" data-i="n3">تواصل</a><button id="lg" class="mono" type="button" aria-label="Switch language">EN</button></nav></header>
+
+<main>
+<section class="hero w">
+  <span class="pill mono" id="pill"><i></i><span id="pt">(pending)</span></span>
+  <h1><span class="ms"><span style="--d:.1s" data-i="h1">خديجة العمودي</span></span></h1>
+  <p class="sub1 ms"><span style="--d:.35s" data-i="s1">مطورة <bdi>Flutter</bdi>. أبني تطبيقات عربية تشتغل بدون إنترنت، وتنزل على المتاجر.</span></p>
+  <p class="sub2 ms"><span style="--d:.55s" data-i="s2">وسنة كاملة وأنا أقدّم على وظائف والرد ما وصل. فقلت أوريكم شغلي.</span></p>
+  <p class="cta"><a href="#work" data-i="g1">شوفوا الشغل</a><a href="https://findjop.vercel.app/" target="_blank" rel="noopener noreferrer" data-i="g2">القصة كاملة</a></p>
+  <span class="scroll mono">scroll ↓</span>
+</section>
+
+<div class="mq" aria-hidden="true"><div id="m1"><span>FLUTTER</span><span>DART</span><span>RIVERPOD</span><span>BLOC</span><span>FIREBASE</span><span>DRIFT</span><span>CLEAN ARCHITECTURE</span><span>FLUTTER</span><span>DART</span><span>RIVERPOD</span><span>BLOC</span><span>FIREBASE</span><span>DRIFT</span><span>CLEAN ARCHITECTURE</span></div></div>
+
+<section id="work">
+  <div class="w hd rv"><span class="lab mono" data-i="c1">01 / الشغل</span><h2 data-i="w">أشياء بنيتها، وتقدرون تنزلونها.</h2></div>
+  <div class="stack">
+    <article class="pj"><div class="w in">
+      <div class="tx"><span class="lab mono" data-i="a0">منشور على المتجرين</span><h3>وزان</h3><span class="meta mono">Flutter · Riverpod · Drift · ~170 tests</span>
+        <p data-i="a1">راتبك بعملة ومصروفك بعملة، وسعر الصرف يتغير. في وزان كل عملية تحفظ سعرها وقت تسجيلها، فتقارير الشهر الماضي ما تتغير. عربي بالكامل، بدون إنترنت وبدون حساب.</p>
+        <p class="ln"><a href="https://play.google.com/store/apps/details?id=com.wazan.budget" target="_blank" rel="noopener noreferrer">Google Play</a><a href="https://apps.apple.com/ye/app/%D9%88%D8%B2%D8%A7%D9%86-%D9%85%D9%8A%D8%B2%D8%A7%D9%86%D9%8A%D8%AA%D9%83-%D8%A8%D8%A3%D9%83%D8%AB%D8%B1-%D9%85%D9%86-%D8%B9%D9%85%D9%84%D8%A9/id6821608733" target="_blank" rel="noopener noreferrer">App Store</a></p></div>
+      <div class="pst p" data-w="800" data-h="1080" style="aspect-ratio:800/1080"><iframe src="./wazan.html" title="Wazan" loading="lazy" tabindex="-1" aria-hidden="true"></iframe></div>
+    </div></article>
+    <article class="pj"><div class="w in">
+      <div class="tx"><span class="lab mono" data-i="b0">منشور على Google Play</span><h3>TaskMate</h3><span class="meta mono">Flutter · Riverpod · SQLite · Notifications</span>
+        <p data-i="b1">مهام بتكرار يومي وأسبوعي وشهري وسنوي، وتنبيهات محلية. كله يشتغل بدون إنترنت.</p>
+        <p class="ln"><a href="https://play.google.com/store/apps/details?id=com.khdooja.taskmate" target="_blank" rel="noopener noreferrer">Google Play</a><a href="https://github.com/khadooja/ToDo_App" target="_blank" rel="noopener noreferrer">GitHub</a></p></div>
+      <div class="pst" data-w="1500" data-h="980" style="aspect-ratio:1500/980"><iframe src="./taskmate.html" title="TaskMate" loading="lazy" tabindex="-1" aria-hidden="true"></iframe></div>
+    </div></article>
+    <article class="pj"><div class="w in">
+      <div class="tx"><span class="lab mono" data-i="d0">تجربة على GitHub</span><h3>MindTrack</h3><span class="meta mono">Flutter · Cubit · Hive · fl_chart</span>
+        <p data-i="d1">يوميات مزاج تلاحظ أنماط شعورك عبر الأيام. يشتغل بدون إنترنت، فيه رسوم أسبوعية، وفحص تلقائي على كل دفعة كود.</p>
+        <p class="ln"><a href="https://github.com/khadooja/Mood-Journal-App" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.behance.net/gallery/251583607/MindTrack-AI-Powered-Mood-Journaling-App" target="_blank" rel="noopener noreferrer">Behance</a></p></div>
+      <div class="pst" data-w="1500" data-h="980" style="aspect-ratio:1500/980"><iframe src="./mindtrack.html" title="MindTrack" loading="lazy" tabindex="-1" aria-hidden="true"></iframe></div>
+    </div></article>
+  </div>
+</section>
+
+<section class="demo"><div class="w">
+  <span class="meta mono" data-i="dm">جرّبوا فكرة وزان. أرقام تجريبية، مو أسعار حقيقية.</span>
+  <h2 data-i="dt">سعر الصرف يتغير. أرقامك القديمة لا.</h2>
+  <div class="rate"><span data-i="dr">سعر الريال السعودي اليوم:</span><button type="button" id="m" aria-label="-5">−</button><b id="r">140</b><button type="button" id="p" aria-label="+5">+</button><span class="mono">YER</span></div>
+  <button class="add" id="a" type="button" data-i="da">سجّل مصروف 100 ريال سعودي</button>
+  <ul class="rows" id="rows" aria-live="polite"></ul>
+  <div class="tot" aria-live="polite"><div><span id="l1"></span> <b id="t1">0</b> YER</div><div class="x"><span id="l2"></span> <b id="t2">0</b> YER</div></div>
+  <small id="hint" data-i="dh">سجّلي مصروفاً، ثم غيّري السعر وسجّلي ثاني، وشوفي الفرق.</small>
+  <button class="rs" id="rs" type="button" data-i="drs">ابدأ من جديد</button>
+</div></section>
+
+<section class="oth w">
+  <span class="lab mono rv" data-i="c2">02 / وأيضاً</span>
+  <a class="row rv" href="https://github.com/khadooja/recipe_app" target="_blank" rel="noopener noreferrer"><b>Recipe App</b><span data-i="o1">وصفات بـ Clean Architecture</span></a>
+  <a class="row rv" href="https://github.com/khadooja/AppChat" target="_blank" rel="noopener noreferrer"><b>Chat App</b><span data-i="o2">محادثة فورية بـ Firebase</span></a>
+  <div class="row rv"><b data-i="o3t">متجر إلكتروني لعميل</b><span data-i="o3">قيد الإطلاق</span></div>
+</section>
+
+<section class="how w" id="how">
+  <span class="lab mono rv" data-i="c3">03 / كيف أشتغل</span>
+  <p class="hl" id="hl" data-i="hp">أفصل الشاشة عن المنطق عن البيانات، وأكتب اختبارات للأشياء اللي لو خربت خربت على الناس شغلهم، مثل حساب العملات. وأخلي GitHub Actions يفحص كل تعديل قبل ما يدخل.</p>
+</section>
+
+<section class="oth w" style="padding-top:20px">
+  <span class="lab mono rv" data-i="c4">04 / اللي مرّيت فيه</span>
+  <div class="row rv"><b data-i="i1t">تحدي الذكاء الاصطناعي</b><span data-i="i1">أفضل 20 فريق من 1,057، وبنيت فحص التلاوة بالتعرف على الصوت · 2026</span></div>
+  <div class="row rv"><b data-i="i2t">هاكاثون NewTech</b><span data-i="i2">5 أيام، من تحديد المشكلة إلى نموذج Figma تفاعلي · 2026</span></div>
+  <div class="row rv"><b data-i="i3t">جامعة حضرموت</b><span data-i="i3">بكالوريوس تقنية المعلومات، بمرتبة الشرف · 2025</span></div>
+</section>
+
+<section class="hire" id="hire"><div class="w">
+  <span class="lab mono" data-i="c5">05 / ومن هنا</span>
+  <h2 data-i="ht">لو عندكم وظيفة Flutter، أو تعرفون أحد عنده، خلّوا اسمي يمرّ في الكلام.</h2>
+  <a class="btn" href="https://www.linkedin.com/in/khadija-alamoudi-8226b4387" target="_blank" rel="noopener noreferrer" data-i="hb">راسلوني على لينكدإن</a>
+  <p class="soc"><a href="https://github.com/khadooja" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.behance.net/khadijaalamoudi" target="_blank" rel="noopener noreferrer">Behance</a></p>
+  <p style="margin-top:24px;color:#6b665b" data-i="hs">متاحة للانضمام فوراً، عن بُعد أو حضورياً في أي مكان.</p>
+</div></section>
+</main>
+<footer>© 2026 خديجة العمودي</footer>
+
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)},rm=matchMedia('(prefers-reduced-motion: reduce)').matches,en=false;
+  var E={n1:'Work',n2:'How I work',n3:'Contact',h1:'Khadija Alamoudi',
+  s1:'Flutter developer. I build Arabic apps that work offline and ship to the stores.',
+  s2:'And for a full year I applied for jobs and no reply came. So I decided to show my work.',
+  g1:'See the work',g2:'The full story',c1:'01 / Work',w:'Things I built, that you can install.',
+  a0:'Live on both stores',a1:'Your salary is in one currency, your spending in another, and the rate keeps changing. In Wazan every transaction keeps the rate it was recorded with, so last month’s reports never change. Fully Arabic, offline, no account.',
+  b0:'Live on Google Play',b1:'Daily, weekly, monthly and yearly repeating tasks with local notifications. Everything works offline.',
+  d0:'Experiment on GitHub',d1:'A mood journal that notices patterns in how you feel over time. Works offline, with weekly charts and automatic checks on every push.',
+  dm:'Try the Wazan idea. Sample numbers, not real rates.',dt:'The rate changes. Your old numbers don’t.',dr:'Saudi riyal today:',da:'Log a 100 SAR expense',
+  dh:'Log an expense, change the rate, log another, and see the difference.',drs:'Start over',
+  c2:'02 / Also',o1:'Recipes with Clean Architecture',o2:'Real-time chat with Firebase',o3t:'An e-commerce app for a client',o3:'Launching soon',
+  c3:'03 / How I work',hp:'I separate screens from logic from data, and I write tests for the things that would hurt people if they broke, like currency math. And I let GitHub Actions check every change before it lands.',
+  c4:'04 / What I have been through',i1t:'AI Challenge',i1:'Top 20 of 1,057 teams, I built recitation checking with speech recognition · 2026',
+  i2t:'NewTech Hackathon',i2:'5 days, from defining the problem to an interactive Figma prototype · 2026',i3t:'Hadhramaut University',i3:'BSc in Information Technology, with honors · 2025',
+  c5:'05 / From here',ht:'If you have a Flutter job, or know someone who does, let my name come up in the conversation.',hb:'Message me on LinkedIn',hs:'Available to join immediately, remote or on-site anywhere.'};
+  var els=document.querySelectorAll('[data-i]'),A={};els.forEach(function(e){A[e.dataset.i]=e.innerHTML});
+  function t(a,b){return en?b:a}
+  var okp=false;
+  function pill(){$('pt').textContent=okp?t('200 · متاحة للتوظيف','200 · Available for hire'):'(pending)'}
+  function hl(){var h=$('hl'),w=h.textContent.trim().split(/\s+/);h.innerHTML=w.map(function(x){return '<span>'+x+'</span>'}).join(' ');hl.s=h.querySelectorAll('span');upd()}
+  function setLang(){document.documentElement.lang=en?'en':'ar';document.documentElement.dir=en?'ltr':'rtl';
+    els.forEach(function(e){e.innerHTML=en?E[e.dataset.i]:A[e.dataset.i]});$('lg').textContent=en?'AR':'EN';
+    document.title=en?'Khadija Alamoudi – Flutter Developer':'خديجة العمودي – مطورة Flutter';pill();hl();draw()}
+  $('lg').addEventListener('click',function(){en=!en;setLang()});
+
+  var rate=140,rows=[];function fmt(n){return n.toLocaleString('en-US')}
+  function draw(){$('r').textContent=rate;
+    $('rows').innerHTML=rows.map(function(x){return '<li><span>100 SAR × '+x+'</span><b class="mono" style="direction:ltr">'+fmt(100*x)+' YER</b></li>'}).join('');
+    var a=rows.reduce(function(s,x){return s+100*x},0);$('t1').textContent=fmt(a);$('t2').textContent=fmt(rows.length*100*rate);
+    $('l1').textContent=t('إجمالي المصروف، بسعر كل عملية (مثل وزان):','Total spent, at each transaction’s own rate (like Wazan):');
+    $('l2').textContent=t('لو كل شي يُحسب بسعر اليوم:','If everything were recalculated at today’s rate:');$('hint').style.display=rows.length?'none':'block'}
+  $('m').addEventListener('click',function(){rate=Math.max(5,rate-5);draw()});$('p').addEventListener('click',function(){rate+=5;draw()});
+  $('a').addEventListener('click',function(){if(rows.length<8){rows.push(rate);draw()}});$('rs').addEventListener('click',function(){rows=[];rate=140;draw()});
+
+  function fit(){document.querySelectorAll('.pst').forEach(function(p){var f=p.firstElementChild;f.style.width=p.dataset.w+'px';f.style.height=p.dataset.h+'px';f.style.transform='scale('+(p.clientWidth/p.dataset.w)+')'})}
+  addEventListener('resize',function(){fit();w=m1.scrollWidth/2});
+
+  var m1=$('m1'),w=0,pj=document.querySelectorAll('.pj'),ticking=false;
+  function upd(){var y=scrollY,h=innerHeight;
+    if(!rm){m1.style.transform='translateX('+(-(y*.4)%(w||1))+'px)';
+      if(innerWidth>=900)pj.forEach(function(p,i){var n=pj[i+1];if(!n)return;var q=Math.min(Math.max(1-n.getBoundingClientRect().top/h,0),1),c=p.firstElementChild;c.style.transform='scale('+(1-.06*q)+')';c.style.opacity=1-.75*q})}
+    var s=hl.s;if(s&&s.length){var r=$('hl').getBoundingClientRect(),pr=rm?1:Math.min(Math.max((h*.85-r.top)/(r.height+h*.35),0),1),k=Math.round(pr*s.length);for(var i=0;i<s.length;i++)s[i].className=i<k?'on':''}}
+  addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(function(){upd();ticking=false})}},{passive:true});
+
+  if(rm){document.querySelectorAll('.rv').forEach(function(n){n.classList.add('on')})}
+  else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});document.querySelectorAll('.rv').forEach(function(n){io.observe(n)})}
+  fit();draw();hl();w=m1.scrollWidth/2;upd();
+  requestAnimationFrame(function(){document.body.classList.add('ld')});
+  setTimeout(function(){okp=true;$('pill').classList.add('ok');pill()},rm?0:2200);
+})();
+</script>
+</body>
+</html>
